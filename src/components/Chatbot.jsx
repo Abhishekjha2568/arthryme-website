@@ -52,7 +52,30 @@ function Chatbot() {
 
       setQuestion("")
 
-      if (userQuestion.includes("digital marketing")) {
+       if (
+           userQuestion.includes("quote") ||
+           userQuestion.includes("quotation") ||
+           userQuestion.includes("price")
+       ) {
+
+  setAnswer(
+    "You can submit your requirements through the Quote Request form on our website. Fill in your details and service requirements, then submit the form. Our team can review your request."
+      )
+   }
+
+
+     else if (
+         userQuestion.includes("contact") ||
+         userQuestion.includes("reach")
+        ) {
+  setAnswer(
+    "You can contact Arthryme using the Contact section on our website. Fill in your details and message, then submit the form."
+    )
+   }
+   
+
+     else  if (userQuestion.includes("digital marketing")) {
+
          setAnswer(faqAnswers["digital marketing"])
       }
       else if (userQuestion.includes("it hardware")) {
